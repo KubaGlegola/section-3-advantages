@@ -8,13 +8,12 @@
 body {
   font-family: 'Montserrat', sans-serif;
   color: var(--text-color);  
-  margin: 0 10%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  @media (max-width: 1024px){
+  @media (max-width: 1150px){
     margin: 5% 5%;
 }
 }

@@ -2,15 +2,13 @@
 /// Here we import all the Styles files we need for our Homepage.
 /// 
 
-#home-page{    
+#home-page{  
+    max-width: 1136px;  
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 16px;
     margin: 0 auto;    
-    background: var(--primary-color);
-    @media (max-width: 1024px){
-        grid-template-columns: 1fr;
-    }
+    background: var(--primary-color);   
 }
 
 .card{
@@ -31,30 +29,23 @@
             height: 40px;
         }
 
-        @media (max-width: 600px){
-            width: 48px;
-            height: 48px;
-            & > img{
-                width: 24px;
-                height: 24px;
-            }
-        }
     }
 
     &__title{
         font-size: 32px;
         font-weight: 700;
-
-        @media (max-width: 600px){
-            font-size: 26px;
-        }
+        margin-top: 24px;
+        margin-bottom: 0;
+        letter-spacing: -1.6px;
+        
     }
 
     &__content{
         font-size: 16px;
-        @media (max-width: 600px){
-            font-size: 14px;
-        }
+        line-height: 1.4;
+        letter-spacing: -0.6px;
+        margin-bottom: 24px;
+        
     }
     
 
@@ -83,13 +74,14 @@
     align-items: center;
     gap: 0.5rem;
     border: none;
-    border-radius: 12px;
+    border-radius: 200px;
     font-size: 12px;
-    letter-spacing: -3%;
+    line-height: 1.5;
     padding: 14px 24px;
     margin-right: auto;
     margin-top: auto;
     cursor: pointer;
+    background-color: #ffffff;
 
     &:hover{
         color: #001AFF;
@@ -99,4 +91,49 @@
         background-color: #F1F5FF;
     }
 
+}
+
+
+@media (max-width: 1150px){
+    #home-page{
+        grid-template-columns: 1fr;
+    }
+
+    .card{
+        padding: 24px;
+
+        &__title{
+            margin-top: 16px;
+            font-size: 26px;
+        }
+
+        &__content{
+            margin-top: 8px;
+            margin-bottom: 16px;
+        }
+    }
+}
+
+@media (max-width: 480px){
+    .card{
+        padding: 24px 16px;
+
+        &__title{
+            line-height: 1.2;
+        }
+
+        &__content{
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        &__icon-container{
+            width: 48px;
+            height: 48px;
+            & > img{
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
 }
