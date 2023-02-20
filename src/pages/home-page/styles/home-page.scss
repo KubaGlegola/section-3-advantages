@@ -84,10 +84,12 @@
     background-color: #ffffff;
 
     &:hover{
+        transition: all linear 0.2s;
         color: #001AFF;
     }
 
     &:active{
+        transition: all linear 0.2s;
         background-color: #F1F5FF;
     }
 
